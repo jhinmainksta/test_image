@@ -1,0 +1,23 @@
+name: Test
+
+on:
+  push:
+    branches: [main]
+  release:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    run: |
+      echo sus>amogus.txt 
+# создать файл
+# вставить текст в файл
+    uses: softprops/action-gh-release@v1
+    if: ${{ github.event_name == 'release'}}
+    with:
+      files: amogus.txt
+      prerelease: true
+    env:
+      GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+# выгрузить файл в релиз
