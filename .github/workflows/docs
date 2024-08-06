@@ -1,0 +1,41 @@
+name: Deploy Gitbook to GitHub Pages
+
+# Указываем триггер для запуска workflow при пуше в ветку main
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branch: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # Используем последнюю версию Ubuntu
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2 # Шаг для клонирования репозитория
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2 # Шаг для установки Node.js
+      with:
+        node-version: '12' # Указываем версию Node.js
+
+    - name: Install GitBook CLI
+      run: |
+        npm install -g gitbook-cli 
+        cd /opt/hostedtoolcache/node/12.22.12/x64/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/
+        npm install graceful-fs@latest --save
+# Устанавливаем GitBook CLI глобально
+
+    - name: Install GitBook plugins
+      run: gitbook install docs # Устанавливаем необходимые плагины GitBook
+
+    - name: Build GitBook
+      run: gitbook build docs # Собираем проект с помощью GitBook
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3 # Используем действие для деплоя на GitHub Pages
+      with:
+        github_token: ${{ secrets.GH_TOKEN }} # Используем токен GitHub для авторизации
+        publish_dir: ./docs/_book # Указываем директорию для публикации
