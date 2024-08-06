@@ -1,0 +1,23 @@
+{
+    "title": "База знаний",
+    "description": "",
+    "author": "",
+    "language": "en",
+    "root": "docs/",
+    "gitbook": "^3.2.2",
+    "plugins": [
+         "anchors",
+        "collapsible-menu",
+         "addcssjs"
+    ],
+    "pluginsConfig": {
+        "bulk-redirect": {
+            "basepath": "",
+            "redirectsFile": "redirects.json",
+            "blank": true
+        },
+        "addcssjs": {
+            "css": ["../drone.css"]
+        }
+    }
+}
