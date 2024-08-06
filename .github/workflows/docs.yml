@@ -34,5 +34,5 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3 # Используем действие для деплоя на GitHub Pages
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }} # Используем токен GitHub для авторизации
+        github_token: ${{ secrets.GH_TOKEN }} # Используем токен GitHub для авторизации
         publish_dir: ./docs/_book # Указываем директорию для публикации
