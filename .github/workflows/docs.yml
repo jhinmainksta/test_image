@@ -5,7 +5,7 @@ on:
   push:
     branches: [main]
   pull_request:
-    branch: [main]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -29,13 +29,13 @@ jobs:
 # Устанавливаем GitBook CLI глобально
 
     - name: Install GitBook plugins
-      run: gitbook install docs # Устанавливаем необходимые плагины GitBook
+      run: gitbook install docs_folder # Устанавливаем необходимые плагины GitBook
 
     - name: Build GitBook
-      run: gitbook build docs # Собираем проект с помощью GitBook
+      run: gitbook build docs_folder # Собираем проект с помощью GitBook
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3 # Используем действие для деплоя на GitHub Pages
       with:
         github_token: ${{ secrets.GH_TOKEN }} # Используем токен GitHub для авторизации
-        publish_dir: ./docs # Указываем директорию для публикации
+        publish_dir: ./docs_folder # Указываем директорию для публикации

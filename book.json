@@ -3,19 +3,14 @@
     "description": "",
     "author": "",
     "language": "en",
-    "root": "docs/",
+    "root": "docs_folder/",
     "gitbook": "^3.2.2",
     "plugins": [
          "anchors",
-        "collapsible-menu",
+         "collapsible-menu",
          "addcssjs"
     ],
     "pluginsConfig": {
-        "bulk-redirect": {
-            "basepath": "",
-            "redirectsFile": "redirects.json",
-            "blank": true
-        },
         "addcssjs": {
             "css": ["../drone.css"]
         }
