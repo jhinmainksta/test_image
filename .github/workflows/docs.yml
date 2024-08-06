@@ -16,7 +16,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2 # Шаг для установки Node.js
       with:
-        node-version: '14' # Указываем версию Node.js
+        node-version: '12' # Указываем версию Node.js
 
     - name: Install GitBook CLI
       run: npm install -g gitbook-cli # Устанавливаем GitBook CLI глобально
