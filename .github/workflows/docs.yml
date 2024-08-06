@@ -21,7 +21,7 @@ jobs:
     - name: Install GitBook CLI
       run: |
         npm install -g gitbook-cli 
-        cd /usr/local/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/
+        cd /opt/hostedtoolcache/node/12.22.12/x64/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/
         npm install graceful-fs@latest --save
 # Устанавливаем GitBook CLI глобально
 
