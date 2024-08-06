@@ -20,6 +20,7 @@ jobs:
 
     - name: Install GitBook CLI
       run: npm install -g gitbook-cli # Устанавливаем GitBook CLI глобально
+      run: npm install graceful-fs@latest --save
 
     - name: Install GitBook plugins
       run: gitbook install docs # Устанавливаем необходимые плагины GitBook
