@@ -19,7 +19,11 @@ jobs:
         node-version: '12' # Указываем версию Node.js
 
     - name: Install GitBook CLI
-      run: npm install -g gitbook-cli && npm install graceful-fs@latest --save # Устанавливаем GitBook CLI глобально
+      run: |
+        npm install -g gitbook-cli 
+        cd /usr/local/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/
+        npm install graceful-fs@latest --save
+# Устанавливаем GitBook CLI глобально
 
     - name: Install GitBook plugins
       run: gitbook install docs # Устанавливаем необходимые плагины GitBook
