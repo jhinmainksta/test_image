@@ -5,6 +5,7 @@
     "root": "docs/",
     "gitbook": "^3.2.x",
     "structure":{
+        "readme": "README.md",
        "summary": "SUMMARY.md"
     }
 }
