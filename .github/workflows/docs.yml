@@ -21,17 +21,14 @@ jobs:
       with:
         node-version: '10' # Указываем версию Node.js
 
-    - name: Setup and rin markdownlint
+    - name: Setup and run markdownlint
       run: |
         npm install markdownlint-cli@0.28.1 -g # FIXME: https://github.com/DavidAnson/markdownlint/issues/435
         markdownlint -V
         markdownlint docs_folder
         
     - name: Install GitBook CLI
-      run: |
-        npm install -g gitbook-cli 
-        gitbook fetch 3.2.3 && npm i npm@3.10.10 --prefix=~/.gitbook/versions/3.2.3/
-# Устанавливаем GitBook CLI глобально
+      run: builder/assets/install_gitbook.sh # Устанавливаем GitBook CLI глобально
 
     - name: Install GitBook plugins
       run: gitbook install # Устанавливаем необходимые плагины GitBook
