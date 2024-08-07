@@ -1,18 +1,7 @@
 {
-    "title": "База знаний",
+    "title": "Sugus",
     "description": "",
     "author": "",
-    "language": "en",
     "root": "docs_folder/",
-    "gitbook": "^3.2.2",
-    "plugins": [
-         "anchors",
-         "collapsible-menu",
-         "addcssjs"
-    ],
-    "pluginsConfig": {
-        "addcssjs": {
-            "css": ["../drone.css"]
-        }
-    }
+    "gitbook": "^3.2.3"
 }
