@@ -2,6 +2,4 @@
 
 tun tun tun tun tun tun tun tududun
 
-![impostor](assets/amogus.png)
-
-[вернуться на мейн page](README.md)
+<img src="../assets/impostor" width=400></img>
