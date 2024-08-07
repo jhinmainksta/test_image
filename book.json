@@ -1,7 +1,10 @@
 {
     "title": "Sugus",
-    "description": "",
+    "description": "Моя Awesome Книгга",
     "author": "",
     "root": "docs/",
-    "gitbook": "^3.2.3"
+    "gitbook": "3.2.x",
+    "structure": {
+        "summary": "SUMMARY.md"
+    }
 }
