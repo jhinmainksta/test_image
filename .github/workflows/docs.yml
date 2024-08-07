@@ -21,6 +21,12 @@ jobs:
       with:
         node-version: '12' # Указываем версию Node.js
 
+    - name: Setup and rin markdownlint
+      run: |
+        npm install markdownlint-cli@0.28.1 -g # FIXME: https://github.com/DavidAnson/markdownlint/issues/435
+        markdownlint -V
+        markdownlint docs_folder
+        
     - name: Install GitBook CLI
       run: |
         npm install -g gitbook-cli 

@@ -1,7 +1,11 @@
 # how to become a human
 
 1. 🙌
-![](/docs_folder/assets/evolution_manual/step_1.png)
+
+<img src="assets/evolution_manual/step_1.png" alt="drawing" width="500">
 
 2. 👌
-![](/docs_folder/assets/evolution_manual/step_2.png)
+
+<img src="assets/evolution_manual/step_2.png" alt="drawing" width="500">
+
+[вернуться на мейн page](START_PAGE.md)
