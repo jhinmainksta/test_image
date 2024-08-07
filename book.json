@@ -3,7 +3,7 @@
     "description": "Моя Awesome Книгга",
     "author": "",
     "root": "docs/",
-    "gitbook": "3.2.x",
+    "gitbook": "^3.2.x",
     "structure":{
        "summary": "SUMMARY.md"
     }
