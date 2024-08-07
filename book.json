@@ -1,4 +1,7 @@
 {
     "gitbook":">=3.0.0",
-    "root": "./docs"
+    "root": "./docs",
+    "structure":{
+        "summary": "README.md"
+    }
 }
