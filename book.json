@@ -2,6 +2,6 @@
     "title": "Sugus",
     "description": "",
     "author": "",
-    "root": "docs_folder/",
+    "root": "docs/",
     "gitbook": "^3.2.3"
 }

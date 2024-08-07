@@ -36,7 +36,7 @@ jobs:
       run: |
         npm install markdownlint-cli@0.28.1 -g # FIXME: https://github.com/DavidAnson/markdownlint/issues/435
         markdownlint -V
-        markdownlint docs_folder
+        markdownlint docs
         
     - name: Install GitBook CLI
       run: |
@@ -48,12 +48,6 @@ jobs:
 
     - name: Build GitBook
       run: gitbook build # Собираем проект с помощью GitBook
-
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3 # Используем действие для деплоя на GitHub Pages
-      with:
-        github_token: ${{ secrets.GH_TOKEN }} # Используем токен GitHub для авторизации
-        publish_dir: ./docs_folder # Указываем директорию для публикации
 
     - name: Upload Website to Release
       if: ${{ github.event_name == 'release' }}
