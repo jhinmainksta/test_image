@@ -5,5 +5,5 @@
 
 export NPM_CONFIG_UNSAFE_PERM=1
 
-npm install gitbook-cli -g
-gitbook fetch 3.2.3 && npm i npm@3.10.10 --prefix=~/.gitbook/versions/3.2.3/
+sudo npm install gitbook-cli -g
+sudo gitbook fetch 3.2.3 && npm i npm@3.10.10 --prefix=~/.gitbook/versions/3.2.3/
