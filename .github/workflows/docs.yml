@@ -39,8 +39,8 @@ jobs:
     - name: Install GitBook CLI
       run: |
         chmod ug+x scripts/install_gitbook.sh # Устанавливаем GitBook CLI глобально
-        ./install_gitbook.sh
-        
+        ./scripts/install_gitbook.sh
+
     - name: Install GitBook plugins
       run: gitbook install # танавливаем необходимые плагины GitBook
 
