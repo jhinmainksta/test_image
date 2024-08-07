@@ -28,7 +28,7 @@ jobs:
         markdownlint docs_folder
         
     - name: Install GitBook CLI
-      run: builder/assets/install_gitbook.sh # Устанавливаем GitBook CLI глобально
+      run: scripts/install_gitbook.sh # Устанавливаем GitBook CLI глобально
 
     - name: Install GitBook plugins
       run: gitbook install # Устанавливаем необходимые плагины GitBook
