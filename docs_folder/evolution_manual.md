@@ -6,4 +6,4 @@
 2. 👌
 ![step_2](assets/evolution_manual/step_2.png){width=500px}
 
-[вернуться на мейн page](START_PAGE.md)
+[вернуться на мейн page](README.md)
