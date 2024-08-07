@@ -8,6 +8,15 @@ on:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+defaults:
+  run:
+    shell: bash
+
 jobs:
   build:
     runs-on: ubuntu-22.04 # Используем последнюю версию Ubuntu
@@ -41,3 +50,12 @@ jobs:
       with:
         github_token: ${{ secrets.GH_TOKEN }} # Используем токен GitHub для авторизации
         publish_dir: ./docs_folder # Указываем директорию для публикации
+
+    - name: Upload Website to Release
+      if: ${{ github.event_name == 'release' }}
+      run: |
+          zip -r Website.zip docs_folder
+          release_tag="${{ github.event.release.tag_name }}"
+          release_id=$(curl -s -H "Authorization: Bearer ${{ secrets.GH_TOKEN }}" "https://api.github.com/repos/jhinmainksta/test_image/releases/tags/$release_tag" | jq -r '.id')
+          echo "Uploading Website.zip to Release #$release_id"
+          curl -s -X POST -H "Authorization: Bearer ${{ secrets.GH_TOKEN }}" -H "Content-Type: application/octet-stream" --data-binary "@Website.zip" "https://uploads.github.com/repos/jhinmainksta/test_image/releases/$release_id/assets?name=Website.zip"
