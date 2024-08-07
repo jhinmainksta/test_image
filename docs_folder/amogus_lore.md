@@ -5,4 +5,4 @@ tun tun tun tun tun tun tun tududun
 
 ![impostor](assets/amogus.png)
 
-[вернуться на мейн page](START_PAGE.md)
+[вернуться на мейн page](README.md)
