@@ -13,7 +13,7 @@ jobs:
           echo sus>amogus.txt 
 # создать файл
 # вставить текст в файл
-      - name: sus2
+      - name: deploy
         uses: softprops/action-gh-release@v1
         if: ${{ github.event_name == 'release'}}
         with:
