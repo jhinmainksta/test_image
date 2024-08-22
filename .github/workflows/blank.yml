@@ -6,13 +6,14 @@ on:
 
 jobs:
   build:
+    environment: sussy
     runs-on: ubuntu-latest
     steps:
       - name: sus1
         run: |
-          echo sus>amogus.txt 
-# создать файл
-# вставить текст в файл
+          echo ${{ secrets.MSG }}>amogus.txt
+      # создать файл
+      # вставить текст в файл
       - name: deploy
         uses: softprops/action-gh-release@v1
         if: ${{ github.event_name == 'release'}}
